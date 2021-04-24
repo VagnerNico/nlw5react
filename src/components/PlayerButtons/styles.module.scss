@@ -1,0 +1,59 @@
+@import '../../styles/global.mixins.scss';
+
+:root {
+  .buttons {
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+
+    @include smDown {
+      align-self: stretch;
+      gap: 0;
+      justify-content: space-between;
+      margin-top: 0;
+    }
+
+    button {
+      background: transparent;
+      border: 0;
+      font-size: 0;
+      transition: filter 0.2s;
+
+      &:disabled {
+        cursor: default;
+        opacity: 0.5;
+      }
+
+      @media not all and (pointer: coarse) {
+        &:hover:not(:disabled) {
+          filter: brightness(0.7);
+        }
+      }
+
+      &.isActive {
+        filter: invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+      }
+
+      @media not all and (pointer: coarse) {
+        &.isActive:hover {
+          filter: brightness(0.6) invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+        }
+      }
+
+      &.playButton {
+        background: var(--purple-400);
+        border-radius: 1rem;
+        height: 4rem;
+        width: 4rem;
+
+        @media not all and (pointer: coarse) {
+          &:hover:not(:disabled) {
+            filter: brightness(0.95);
+          }
+        }
+      }
+    }
+  }
+}

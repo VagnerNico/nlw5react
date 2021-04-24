@@ -1,0 +1,46 @@
+@import '../../styles/global.mixins.scss';
+
+:root {
+  .currentEpisode {
+    text-align: center;
+
+    @include smDown {
+      margin-top: 1rem;
+    }
+
+    img {
+      border-radius: 1.5rem;
+    }
+
+    span {
+      display: block;
+      line-height: 1.5rem;
+      margin-top: 1rem;
+      opacity: 0.6;
+    }
+
+    strong {
+      display: block;
+      font: 600 1.25rem Lexend, sans-serif;
+      line-height: 1.75rem;
+      margin-top: 2rem;
+
+      @include smDown {
+        margin-top: 0rem;
+      }
+    }
+  }
+
+  .emptyPlayer {
+    align-items: center;
+    background: linear-gradient(143.8deg, rgba(145, 100, 250, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    border: 1.5px dashed var(--purple-300);
+    border-radius: 1.5rem;
+    display: flex;
+    height: 20rem;
+    justify-content: center;
+    padding: 4rem;
+    text-align: center;
+    width: 100%;
+  }
+}

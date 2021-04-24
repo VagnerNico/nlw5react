@@ -1,0 +1,77 @@
+@import '../../styles/global.mixins.scss';
+
+:root {
+  .mobilePlayerContainer {
+    align-items: center;
+    background: var(--purple-500);
+    color: var(--text-contrast);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 4rem 3rem 4rem;
+
+    @include xsDown {
+      padding: 0.3rem 1rem 3rem 1rem;
+    }
+
+    @include mdUp {
+      display: none;
+    }
+  }
+
+  @keyframes slide-right {
+    from {
+      transform: translateX(50%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .emptyPlayer {
+    animation: none;
+  }
+
+  .mobileTitle {
+    animation: slide-right 10s 0s alternate infinite linear;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    transition: visibility 0.2s;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .mobileTitleHidden {
+    visibility: hidden;
+  }
+
+  .playerContainer {
+    align-items: center;
+    background: var(--purple-500);
+    color: var(--text-contrast);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    padding: 3rem 4rem;
+    width: 26.5rem;
+
+    @include smDown {
+      display: none;
+    }
+
+    footer {
+      align-self: stretch;
+    }
+
+    header {
+      align-items: center;
+      display: flex;
+      gap: 1rem;
+    }
+
+    strong {
+      font-family: Lexend, sans-serif;
+      font-weight: 600;
+    }
+  }
+}

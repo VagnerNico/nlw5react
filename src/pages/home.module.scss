@@ -1,0 +1,226 @@
+@import '../styles/global.mixins.scss';
+
+:root {
+  .allEpisodes {
+    padding-bottom: 2rem;
+
+    @include smDown {
+      display: none;
+    }
+
+    table {
+      width: 100%;
+
+      td {
+        font-size: 0.875rem;
+
+        a {
+          color: var(--anchor-color);
+          font-family: Lexend, sans-serif;
+          font-size: 1rem;
+          font-weight: 600;
+          line-height: 1.4rem;
+          text-decoration: none;
+
+          @media not all and (pointer: coarse) {
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        button {
+          background: var(--background);
+          border: 1px solid var(--border-color);
+          border-radius: 0.675rem;
+          font-size: 0;
+          height: 2rem;
+          transition: filter 0.2s;
+          width: 2rem;
+
+          &.darkButton {
+            background: var(--green-500);
+          }
+
+          @media not all and (pointer: coarse) {
+            &:hover {
+              filter: brightness(0.95);
+            }
+          }
+
+          img {
+            height: 1.25rem;
+            width: 1.25rem;
+          }
+        }
+
+        img {
+          border-radius: 0.5rem;
+          height: 2.5rem;
+          width: 2.5rem;
+        }
+      }
+
+      th,
+      td {
+        border-bottom: 1px solid var(--border-color);
+        padding: 0.75rem 1rem;
+      }
+
+      th {
+        color: var(--table-head);
+        font: 500 0.75rem Lexend, sans-serif;
+        text-align: left;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .allEpisodesMobile {
+    @include mdUp {
+      display: none;
+    }
+  }
+
+  .homepage {
+    height: calc(100vh - 6.5rem);
+    overflow-y: scroll;
+    padding: 0 4rem;
+
+    @include smDown {
+      padding: 0 0.5rem 8rem 0.5rem;
+      width: 100vw;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      margin-top: 3rem;
+
+      @include smDown {
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .latestEpisodes {
+    ul {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      list-style: none;
+
+      @include smDown {
+        grid-template-columns: 100%;
+      }
+
+      li {
+        align-items: center;
+        border: 1px solid var(--border-color);
+        border-radius: 1.5rem;
+        background: var(--background);
+        display: flex;
+        padding: 1.25rem;
+        position: relative;
+
+        .episodeDetails {
+          flex: 1;
+          margin-left: 1rem;
+
+          @include smDown {
+            margin-left: 0;
+            width: 100%;
+          }
+
+          a {
+            color: var(--anchor-color);
+            display: block;
+            font-family: Lexend, sans-serif;
+            font-weight: 600;
+            line-height: 1.4rem;
+            text-decoration: none;
+
+            @media not all and (pointer: coarse) {
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+
+          p {
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            max-width: 70%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          span {
+            display: inline-block;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+
+            &:last-child {
+              margin-left: 0.5rem;
+              padding-left: 0.5rem;
+              position: relative;
+
+              &::before {
+                background: #ddd;
+                border-radius: 2px;
+                content: '';
+                height: 4px;
+                left: 0;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 4px;
+              }
+            }
+          }
+        }
+
+        button {
+          background: var(--background);
+          border: 1px solid var(--border-color);
+          border-radius: 0.675rem;
+          bottom: 2rem;
+          font-size: 0;
+          height: 2.5rem;
+          position: absolute;
+          right: 2rem;
+          transition: filter 0.2s;
+          width: 2.5rem;
+
+          &.darkButton {
+            background: var(--green-500);
+          }
+
+          @media not all and (pointer: coarse) {
+            &:hover {
+              filter: brightness(0.95);
+            }
+          }
+
+          img {
+            height: 1.5rem;
+            width: 1.5rem;
+          }
+        }
+
+        div:first-child {
+          @include smDown {
+            display: none !important;
+          }
+        }
+
+        img {
+          border-radius: 1rem;
+          height: 6rem;
+          width: 6rem;
+        }
+      }
+    }
+  }
+}

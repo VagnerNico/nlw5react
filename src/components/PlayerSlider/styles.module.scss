@@ -1,0 +1,43 @@
+@import '../../styles/global.mixins.scss';
+
+:root {
+  .progress {
+    align-items: center;
+    display: flex;
+    font-size: 0.875rem;
+    gap: 0.5rem;
+
+    @include smDown {
+      align-self: stretch;
+      gap: 0;
+    }
+
+    .slider {
+      flex: 1;
+      .emptySlider {
+        background: var(--purple-300);
+        border-radius: 2px;
+        height: 4px;
+        width: 100%;
+      }
+    }
+
+    &.noEpisode {
+      opacity: 0.5;
+    }
+
+    span {
+      display: inline-block;
+      text-align: center;
+      width: 4rem;
+
+      &:first-child {
+        margin-right: 0.5rem;
+      }
+
+      &:last-child {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
