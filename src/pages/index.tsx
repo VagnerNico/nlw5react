@@ -158,7 +158,7 @@ export default function Home({ allEpisodes, latestEpisodes }: HomeProps): ReactE
 }
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  const response = await api.get<APIEpisode[]>(`episodes`, {
+  const response = await api.get<APIEpisode[]>(`/api/episodes`, {
     params: { _limit: 12, _sort: `published_at`, _order: `desc` },
   });
   const episodes: Episode[] = response.data.map(

@@ -71,7 +71,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { slug } = context.params;
-  const response = await api.get<APIEpisode>(`/episodes/${slug}`);
+  const response = await api.get<APIEpisode>(`/api/episodes/${slug}`);
   const { published_at, ...rest } = response.data;
 
   const episode: SingleEpisode = {
