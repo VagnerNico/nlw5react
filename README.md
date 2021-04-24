@@ -8,8 +8,8 @@ Adicionei o dark mode com um toggler no canto superior direito, salvando no loca
 
 ###### Desktop
 
-![Desktop image](https://github.com/VagnerNico/nlw5react/tree/master/repo_images/desktop.gif)
+![Desktop image](https://github.com/VagnerNico/nlw5react/blob/master/repo_images/desktop.gif?raw=true)
 
 ###### Mobile
 
-![Mobile image](https://github.com/VagnerNico/nlw5react/tree/master/repo_images/mobile.gif)
+![Mobile image](https://github.com/VagnerNico/nlw5react/blob/master/repo_images/mobile.gif?raw=true)
