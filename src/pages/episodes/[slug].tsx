@@ -7,8 +7,9 @@ import Head from 'next/head';
 import { ReactElement } from 'react';
 import { APIEpisode, Episode as SingleEpisode } from '../';
 import { usePlayer } from '../../contexts/PlayerContext';
-import { api } from '../../services/api';
+// import { api } from '../../services/api';
 import { convertDurationToTimeString } from '../../utils/convertDurationToTimeString';
+import * as server from '../../../server.json';
 import style from './episode.module.scss';
 
 interface EpisodeProps {
@@ -49,15 +50,15 @@ export default function Episode({ episode }: EpisodeProps): ReactElement {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { data } = await api.get<APIEpisode[]>(`episodes`, {
-    params: {
-      _limit: 2,
-      _order: `desc`,
-      _sort: `published_at`,
-    },
-  });
+  // const { data } = await api.get<APIEpisode[]>(`episodes`, {
+  //   params: {
+  //     _limit: 2,
+  //     _order: `desc`,
+  //     _sort: `published_at`,
+  //   },
+  // });
 
-  const paths = data.map((episode) => ({
+  const paths = server.episodes.map((episode) => ({
     params: {
       slug: episode.id,
     },
@@ -71,7 +72,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { slug } = context.params;
-  const response = await api.get<APIEpisode>(`/api/episodes/${slug}`);
+  // const response = await api.get<APIEpisode>(`/api/episodes/${slug}`);
+  const response = { data: server.episodes.find(episode => episode.id === slug) };
   const { published_at, ...rest } = response.data;
 
   const episode: SingleEpisode = {

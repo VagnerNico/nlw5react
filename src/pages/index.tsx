@@ -6,8 +6,9 @@ import Link from 'next/link';
 import { ReactElement } from 'react';
 import { usePlayer } from '../contexts/PlayerContext';
 import { useTheme } from '../contexts/ThemeContext';
-import { api } from '../services/api';
+// import { api } from '../services/api';
 import { convertDurationToTimeString } from '../utils/convertDurationToTimeString';
+import * as server from '../../server.json';
 import styles from './home.module.scss';
 
 export interface APIEpisode {
@@ -158,9 +159,10 @@ export default function Home({ allEpisodes, latestEpisodes }: HomeProps): ReactE
 }
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  const response = await api.get<APIEpisode[]>(`/api/episodes`, {
-    params: { _limit: 12, _sort: `published_at`, _order: `desc` },
-  });
+  // const response = await api.get<APIEpisode[]>(`/api/episodes`, {
+  //   params: { _limit: 12, _sort: `published_at`, _order: `desc` },
+  // });
+  const response = { data: server.episodes };
   const episodes: Episode[] = response.data.map(
     (episode): Episode => {
       const { published_at, ...rest } = episode;
