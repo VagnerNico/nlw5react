@@ -21,9 +21,9 @@
 </h2>
 
 <p align="center">
- <a href="#-about">About</a> •
+ <a href="#about">About</a> •
  <a href="#-prototype">Prototype</a> • 
- <a href="#-local-development">Local development</a> • 
+ <a href="#local-development">Local development</a> • 
  <a href="#-techs">Techs</a>
 </p>
 
@@ -37,7 +37,7 @@ The app is built in React + NextJS and gives all common commands from an audio p
 ---
 ## 🎨 Prototype
 <a href="https://www.figma.com/file/lvj0X4V5flra1SQB83hHnz/Podcastr-(Copy)">
-  <img alt="Layout podcastr figma" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
+  <img alt="Prototype podcastr figma" src="https://img.shields.io/badge/Prototype%20Link%20-Figma-%2304D361">
 </a>
 
 ### Web - Desktop
@@ -61,7 +61,7 @@ The app is built in React + NextJS and gives all common commands from an audio p
 * [Node.js](https://nodejs.org/en/)
 * [NPM](https://www.npmjs.com/get-npm) ou [Yarn](https://yarnpkg.com/) (you are an npm user? Delete the file yarn.lock, ok?.)
 
-### 🎲 Rodando a aplicação web
+### Commands to put the App up
 ```bash
 # Clone this repository -> using SSH
 $ git clone git@github.com:VagnerNico/nlw5react.git
