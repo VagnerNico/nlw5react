@@ -42,15 +42,15 @@ The app is built in React + NextJS and gives all common commands from an audio p
 
 ### Web - Desktop
 
-<p align="center">
-  <img src="./.github/repo_images/desktop.gif" alt="Desktop demo" title="Desktop Web App Demo" width="900px"/>
-</p>
+<a align="center" href="https://nlw5react.vercel.app/">
+  <img src="./.github/desktop.gif" alt="Desktop demo" title="Desktop Web App Demo" width="900px"/>
+</a>
 
 ### Web - Mobile
 
-<p align="center">
-  <img src="./.github/repo_images/mobile.gif" alt="Mobile demo" width="500px" height="300px"/>
-</p>
+<a align="center" href="https://nlw5react.vercel.app/">
+  <img src="./.github/mobile.gif" alt="Mobile demo" height="620px"/>
+</a>
 
 ---
 
