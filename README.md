@@ -36,21 +36,25 @@ The app is built in React + NextJS and gives all common commands from an audio p
 
 ---
 ## 🎨 Prototype
-<a href="https://www.figma.com/file/lvj0X4V5flra1SQB83hHnz/Podcastr-(Copy)">
+<a href="https://www.figma.com/file/lvj0X4V5flra1SQB83hHnz/Podcastr-(Copy)" target="_blank">
   <img alt="Prototype podcastr figma" src="https://img.shields.io/badge/Prototype%20Link%20-Figma-%2304D361">
 </a>
 
 ### Web - Desktop
 
-<a align="center" href="https://nlw5react.vercel.app/">
-  <img src="./.github/desktop.gif" alt="Desktop demo" title="Desktop Web App Demo" width="900px"/>
-</a>
+<p align="center">
+  <a href="https://nlw5react.vercel.app/" target="_blank">
+    <img src="./.github/desktop.gif" alt="Desktop demo" title="Desktop Web App Demo" width="900px"/>
+  </a>
+</p>
 
 ### Web - Mobile
 
-<a align="center" href="https://nlw5react.vercel.app/">
-  <img src="./.github/mobile.gif" alt="Mobile demo" height="620px"/>
-</a>
+<p align="center">
+  <a href="https://nlw5react.vercel.app/" target="_blank">
+    <img src="./.github/mobile.gif" alt="Mobile demo" height="620px"/>
+  </a>
+</p>
 
 ---
 
@@ -59,7 +63,7 @@ The app is built in React + NextJS and gives all common commands from an audio p
 ### Deps
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/en/)
-* [NPM](https://www.npmjs.com/get-npm) ou [Yarn](https://yarnpkg.com/) (you are an npm user? Delete the file yarn.lock, ok?.)
+* [NPM](https://www.npmjs.com/get-npm) ou [Yarn](https://yarnpkg.com/) (are you an npm user? Delete the file yarn.lock, ok?.)
 
 ### Commands to put the App up
 ```bash
