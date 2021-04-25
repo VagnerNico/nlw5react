@@ -45,8 +45,6 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
           <meta name="browsermode" content="application" />
           {/*Disable night mode for this page */}
           <meta name="nightmode" content="enable/disable" />
-          {/*Fitscreen */}
-          <meta name="viewport" content="uc-fitscreen=yes" />
           {/*Layout mode*/}
           <meta name="layoutmode" content="fitscreen/standard" />
           {/*imagemode - show image even in text only mode */}
